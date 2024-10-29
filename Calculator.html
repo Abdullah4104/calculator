@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Calculator</title>
+</head>
+<style>
+    .bg{
+        background-color: cadetblue;
+        width: 400px;
+        height: 600px;
+        border-radius: 20px;
+        position: absolute;
+        top: 5%;
+        left: 32%;
+        
+        min-width:26%;
+        max-width: 26rem;
+    }
+    .input{
+        width: 350px;
+        height: 65px;
+        margin: 60px 25px;
+        border-radius: 10px;
+        background-color: cadetblue;
+    }
+    .txt2{
+        font-size: x-large;
+        margin-left: 330px;
+        margin-top: -5px;
+    }
+    .txt1{
+        margin-left: 330px;
+        margin-top: 5px;
+    }
+    .equalsTo{
+        width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 88%;
+        left: 75%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: lightblue;
+       
+    }
+    .equalsTo:active{
+    transform: scale(1.05);
+}
+    .point{
+        width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 88%;
+        left: 51%;
+        border-radius: 5px;
+        border: none;
+        font-size: 40px;
+        background-color: lightblue;
+    }
+    .point:active{
+    transform: scale(1.05);
+}
+    .zero{
+        width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 88%;
+        left: 27%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px; 
+        background-color: aliceblue; 
+    }
+    .zero:active{
+    transform: scale(1.05);
+}
+.plusOrMinus{
+        width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 88%;
+        left: 3%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: lightblue;
+}
+.plusOrMinus:active{
+    transform: scale(1.05);
+}
+.plus{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 77%;
+        left: 75%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: lightblue;
+}
+.plus:active{
+    transform: scale(1.05);
+}
+.nine{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 77%;
+        left: 51%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.nine:active{
+    transform: scale(1.05);
+}
+.eight{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 77%;
+        left: 27%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.eight:active{
+    transform: scale(1.05);
+}
+.seven{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 77%;
+        left: 3%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.seven:active{
+    transform: scale(1.05);
+}
+.six{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 66%;
+        left: 51%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.six:active{
+    transform: scale(1.05);
+}
+.five{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 66%;
+        left: 27%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.five:active{
+    transform: scale(1.05);
+}
+.four{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 66%;
+        left: 3%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.four:active{
+    transform: scale(1.05);
+}
+.minus{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 66%;
+        left: 75%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: lightblue;
+}
+.minus:active{
+    transform: scale(1.05);
+}
+.three{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 55%;
+        left: 51%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.three:active{
+    transform: scale(1.05);
+}
+.two{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 55%;
+        left: 27%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.two:active{
+    transform: scale(1.05);
+}
+.one{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 55%;
+        left: 3%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.one:active{
+    transform: scale(1.05);
+}
+.multiply{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 55%;
+        left: 75%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: lightblue;
+}
+.multiply:active{
+    transform: scale(1.05);
+}
+.clearE{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 44%;
+        left: 51%;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        background-color: lightblue;
+}
+.clearE:active{
+    transform: scale(1.05);
+}
+.clear{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 44%;
+        left: 27%;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        background-color: lightblue;
+}
+.clear:active{
+    transform: scale(1.05);
+}
+.slice{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 44%;
+        left: 3%;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        background-color: lightblue;
+}
+.slice:active{
+    transform: scale(1.05);
+}
+.divide{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 44%;
+        left: 75%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: lightblue;
+}
+.divide:active{
+    transform: scale(1.05);
+}
+.three{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 55%;
+        left: 51%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.two{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 55%;
+        left: 27%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.one{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 55%;
+        left: 3%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: aliceblue;
+}
+.multiply{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 55%;
+        left: 75%;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        background-color: lightblue;
+}
+.multiply:active{
+    transform: scale(1.05);
+}
+.inverse{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 33%;
+        left: 51%;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        background-color: lightblue;
+}
+.inverse:active{
+    transform: scale(1.05);
+}
+.modulus{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 33%;
+        left: 27%;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        background-color: lightblue;
+}
+.modulus:active{
+    transform: scale(1.05);
+}
+.square{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 33%;
+        left: 3%;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        background-color: lightblue;
+}
+.square:active{
+    transform: scale(1.05);
+}
+.sqrt{
+    width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 33%;
+        left: 75%;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        background-color: lightblue;
+}
+.sqrt:active{
+    transform: scale(1.05);
+}
+.title{
+position: absolute;
+top: 2%;
+}
+.min{
+    margin-left: 170px;
+    margin-top: -5px;
+}
+.standard{
+font-size: 25px;
+margin-top: -13px;
+}
+.enter{
+    width: 350px;
+    height: 60px;
+    position: absolute;
+    top: 15%;
+    font-size: 30px;
+    text-align: end;
+}
+.ptag{
+    width: 350px;
+    height: 60px;
+    background-color: cadetblue;
+    border: none;
+    outline: none;
+    position: absolute;
+    font-size: 30px;
+    text-align: end;
+    left: 0;
+    margin-top: 30px;
+}
+.inptag{
+    width: 350px;
+    height: 40px;
+    background-color: cadetblue;
+    border: none;
+    outline: none;
+    position: absolute;
+    font-size: 20px;
+    text-align: end;
+    margin-top: -10px;
+    left: 0%;
+}
+</style>
+<body>
+    <div class="bg">
+       <div class="input">
+        <span class="title">Calculator 
+            <span class="min">-- &emsp;&emsp;▢  &emsp;  &emsp; X</span>
+        </span>
+        <p class="standard">Standard</p>
+        </select>
+        <div  class="enter">
+             <input id="display" class="inptag" type="text">
+        <input id="enterValue" class="ptag" type="text">
+        </div>
+        <p  id="operValue"></p>
+        <button onclick="Numbers('1')" class="one">1</button>
+        <button onclick="Numbers('2')" class="two">2</button>
+        <button onclick="Numbers('3')" class="three">3</button>
+        <button onclick="Numbers('4')" class="four">4</button>
+        <button onclick="Numbers('5')" class="five">5</button>
+        <button onclick="Numbers('6')" class="six">6</button>
+        <button onclick="Numbers('7')" class="seven">7</button>
+        <button onclick="Numbers('8')" class="eight">8</button>
+        <button onclick="Numbers('9')" class="nine">9</button>
+        <button onclick="Numbers('0')" class="zero">0</button>
+        <button onclick="Operators(' + ')" class="plus"> + </button>
+        <button onclick="Operators(' - ')" class="minus"> - </button>
+        <button onclick="Operators(' ÷ ')" class="divide"> ÷ </button>
+        <button onclick="Operators(' x ')" class="multiply"> x </button>
+        <button onclick="equals()" class="equalsTo">=</button>
+        <button onclick="Clear()" class="clear">C</button>
+        <button onclick="ClearE()"  class="clearE">CE</button>
+        <button onclick="Operators('1/')" class="inverse">1/x</button>
+        <button onclick="Operators('±')" class="plusOrMinus">±</button>
+        <button onclick="Operators('√')" class="sqrt">√</button>
+        <button onclick="Operators(' % ')" class="modulus">%</button>
+        <button onclick="Numbers('.')" class="point">.</button>
+        <button onclick="Operators('^2')" class="square">x^2</button>
+        <button onclick="Slice()" class="slice">DEL</button>
+
+       </div>
+    </div>
+</body>
+<script>
+    
+   let result=document.getElementById('enterValue');
+   let displayOperator=document.getElementById('operValue');
+   let firstNumber;
+   let newNumber;
+   
+function Numbers(result){
+   enterValue.value+=result;
+   newNumber=enterValue.value
+   
+   
+}
+function Operators(displayOperator){
+    operValue.value=displayOperator;
+    
+    
+    if (displayOperator===' + ') {
+        display.value= enterValue.value+ displayOperator;
+        
+    }
+    
+    else if (displayOperator===' - ') {
+        display.value=enterValue.value+  displayOperator; 
+    }
+    else if (displayOperator===' ÷ ') {
+        display.value=enterValue.value+ displayOperator; 
+    }
+    else if (displayOperator===' x ') {
+        display.value=enterValue.value+ displayOperator; 
+    }
+    else if (displayOperator===' % ') {
+        display.value=enterValue.value+displayOperator; 
+    }
+    else if (displayOperator==='√') {
+        display.value= displayOperator+enterValue.value; 
+    }
+    else if (displayOperator==='1/') {
+        display.value= displayOperator+enterValue.value ; 
+    }
+    else if (displayOperator==='^2') {
+        display.value=enterValue.value + displayOperator; 
+    }
+    else if (displayOperator==='±') {
+        display.value= displayOperator+enterValue.value; 
+    }
+    firstNumber=result.value;
+    
+    enterValue.value=''   
+}
+function equals(){
+//  enterValue.value=eval(enterValue.value)
+display.value= firstNumber+ operValue.value + newNumber;
+
+if (operValue.value==(' + ')) {
+    firstNumber=((Number(firstNumber)))+((Number(newNumber)))
+    enterValue.value=firstNumber   
+    
+    }
+    else if (operValue.value==(' - ')) {
+        firstNumber=((Number(firstNumber)))-((Number(newNumber)))
+    }
+    else if (operValue.value==' ÷ ') {
+        firstNumber=((Number(firstNumber)))/((Number(newNumber))) 
+    }
+    else if (operValue.value==' x ') {
+        firstNumber=((Number(firstNumber)))*((Number(newNumber))) 
+    }
+    else if (operValue.value==' % ') {
+        firstNumber=((Number(firstNumber)))%((Number(newNumber))) 
+    }
+    else if (operValue.value=='√') {
+        display.value= operValue.value+firstNumber
+        firstNumber=((Number(firstNumber)))**0.5
+        }
+        else if (operValue.value=='1/') {
+        display.value= operValue.value+firstNumber
+        firstNumber=1/((Number(firstNumber)))
+        }
+        else if (operValue.value=='^2') {
+        display.value=firstNumber+ operValue.value
+        firstNumber=((Number(firstNumber)))**2
+        }
+        else if (operValue.value=='±') {
+        display.value= operValue.value+firstNumber
+        firstNumber=((Number(firstNumber)))*-1
+        }
+    else{
+        alert('wrong')
+    }
+display.value+='='
+enterValue.value=firstNumber
+}
+function Clear(){
+   enterValue.value=''
+   display.value=''
+}
+function ClearE(){
+   display.value=''
+}
+function Slice(){
+enterValue.value=enterValue.value.slice(0,-1);
+display.value=display.value.slice(0,-1);
+}
+document.body.style.backgroundColor='lightblue'
+</script>
+</html>
