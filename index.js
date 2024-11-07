@@ -102,4 +102,6 @@ function Slice(){
 enterValue.value=enterValue.value.slice(0,-1);
 display.value=display.value.slice(0,-1);
 }
-document.body.style.background=' linear-gradient(to right, rgb(137, 216, 203), rgb(124, 124, 156))'
+document.body.style.background=' white'
+console.log(window.innerWidth);
+

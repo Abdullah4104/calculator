@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .wrapper{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .calculator{
+        background-color: rgb(137, 133, 133);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 27%;
+        min-width: 23rem;
+
+    }
+    .calculator .wrap button{
+        border: 0;
+        outline: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        background: transparent;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        margin: 8px;
+        box-shadow: -8px -8px 15px rgb(130, 122, 122),5px 5px 15px rgb(130, 122, 122);
+    }
+    .display{
+        height: 30px;
+        width: 80%;
+    }
+    .wrap .display{
+        display: flex; 
+        justify-content: flex-end;
+        margin: 20px 0;
+
+   }
+   .wrap .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+    
+   }
+   .display{
+    width: 95%;
+    height: 15%;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    text-align: right;
+    font-size: 20px;
+   }
+   .enterValue{
+    width: 95%;
+    height: 15%;
+    background: transparent;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    text-align: right;
+
+   }
+
+</style>
+<body>
+    <div class="wrapper">
+    <div class="calculator">
+        <p>Standard Calculator</p>
+        <input class="display" id="display" type="text">
+        <input class="enterValue" id="enterValue" type="text">
+    <div class="wrap" > 
+        <p id="operValue"></p>
+        <div>
+            <button onclick="Operators('1/')" class="inverse">1/x</button>
+        <button onclick="Operators('^2')" class="square">x^2</button>
+        
+        <button onclick="Operators('√')" class="sqrt">√</button>
+        <button onclick="Operators(' % ')" class="modulus">%</button>
+        </div>
+        
+        <div>
+            <button onclick="Slice()" class="slice">DEL</button>
+        <button onclick="Clear()" class="clear">C</button>
+        <button onclick="ClearE()" class="clearE">CE</button>
+        <button onclick="Operators(' ÷ ')" class="divide"> ÷ </button>
+        </div>
+        <div>
+            <button onclick="Numbers('1')" class="one">1</button>
+        <button onclick="Numbers('2')" class="two">2</button>
+        <button onclick="Numbers('3')" class="three">3</button>
+        <button onclick="Operators(' x ')" class="multiply"> x </button>
+        </div>
+        <div>
+            <button onclick="Numbers('4')" class="four">4</button>
+        <button onclick="Numbers('5')" class="five">5</button>
+        <button onclick="Numbers('6')" class="six">6</button>
+        <button onclick="Operators(' - ')" class="minus"> - </button>
+        </div>
+       <div >
+        <button onclick="Numbers('7')" class="seven">7</button>
+        <button onclick="Numbers('8')" class="eight">8</button>
+        <button onclick="Numbers('9')" class="nine">9</button>
+        <button onclick="Operators(' + ')" class="plus"> + </button>
+       </div>
+       <div style="" >
+        <button  onclick="Operators('±')" class="plusOrMinus">±</button>
+        <button onclick="Numbers('0')" class="zero">0</button>
+        <button  onclick="Numbers('.')" class="point">.</button>
+        <button onclick="equals()" class="equalsTo">=</button>
+       </div>
+        
+    </div>
+</div>
+</div>
+<script src="index.js">
+
+</script>
+</body>
+</html>
